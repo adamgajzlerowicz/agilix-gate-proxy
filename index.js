@@ -13,7 +13,7 @@ const browserClients = new Set()
 deviceSocket.on('message', msg => {
     for (const client of browserClients) {
         if (client.readyState === WebSocket.OPEN) {
-            client.send(msg)
+            client.send(msg.toString())
         }
     }
 })
