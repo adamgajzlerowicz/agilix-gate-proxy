@@ -18,7 +18,7 @@ deviceSocket.on('message', msg => {
     }
 })
 
-deviceSocket.on("connection", () => {
+deviceSocket.on("open", () => {
     console.log('Gate connected')
 })
 
